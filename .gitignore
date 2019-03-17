@@ -1,0 +1,11 @@
+# vscode files
+.vscode/
+
+# twitter data directories
+college_followers/
+
+# clustering result directory
+clusters/
+
+# TRIPS parser result directory
+results/
