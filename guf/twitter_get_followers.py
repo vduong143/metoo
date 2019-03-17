@@ -2,7 +2,6 @@ import os
 import sys
 import json
 import time
-import timeit
 import math
 from tweepy import Cursor
 from twitter_client import get_twitter_client
@@ -26,7 +25,6 @@ def get_followers(username, max_followers, output_file):
     with open(json_file, 'w') as json_output:
         with progressbar.ProgressBar(max_value=progressbar.UnknownLength) as bar:
             for followers in Cursor(client.followers_ids, screen_name=username).pages(max_pages):
-                start = timeit.default_timer()
                 for chunk in paginate(followers, 100):
                     try:
                         users = client.lookup_users(user_ids=chunk)
@@ -40,18 +38,15 @@ def get_followers(username, max_followers, output_file):
                             bar.update(count)
                     except:
                         pass
-                stop = timeit.default_timer()
                 if len(followers) == 5000:
-                    print("\nMore users available. Sleeping to avoid rate limit")
-                    time.sleep(60-start+stop)
+                    time.sleep(60)
     print("<{}> followers completed".format(username))
     time.sleep(60)
 
 if __name__ == '__main__':
     directory = os.getcwd()
-    college_file = open(directory+'/colleges.txt','r')
-    colleges = college_file.readlines()
-    usernames = [c.strip() for c in colleges]
+    usernames = open(directory+'/usernames.txt','r').readlines()
+    usernames = [u.strip() for u in usernames]
 
     MAX_FOLLOWERS = 1500000
 
