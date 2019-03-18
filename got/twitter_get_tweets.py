@@ -4,7 +4,23 @@ import time
 import os
 import json
 import math
-import got
+from TweetCriteria import TweetCriteria
+from TweetManager import TweetManager
+from Tweet import Tweet
+
+def get_tweets(usernames, output_dir, max_tweets, search, since, until):
+    for college in os.listdir('/Users/vietduong/Desktop/240project/college_celeb_clean/')
+    return None
+
+if __name__ == '__main__':
+    directory = os.getcwd()
+    usernames = open(directory+'/usernames.txt','r').readlines()
+    usernames = [u.strip() for u in usernames]
+
+    MAX_TWEETS = math.maxint
+
+    for username in usernames:
+        file_name = directory + '/college_followers/{}_followers.txt'.format(username)
 
 for files in os.listdir('/Users/vietduong/Desktop/240project/college_celeb_clean/'):
     if files.endswith('celeb.txt'):
