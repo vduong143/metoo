@@ -9,3 +9,6 @@ clusters/
 
 # TRIPS parser result directory
 results/
+
+# macOS system files
+# .DS_Store 
