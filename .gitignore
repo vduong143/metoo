@@ -3,6 +3,8 @@
 
 # twitter data directories
 college_followers/
+college-followers/
+metoo-tweets/
 
 # clustering result directory
 clusters/
@@ -10,5 +12,8 @@ clusters/
 # TRIPS parser result directory
 results/
 
-# macOS system files
-.DS_Store 
+# TRIPS vagrant directory
+vagrant-trips/
+
+# SEMAFOR directory
+semafor/
