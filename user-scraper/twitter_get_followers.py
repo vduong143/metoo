@@ -51,5 +51,5 @@ if __name__ == '__main__':
     MAX_FOLLOWERS = 1500000
 
     for username in usernames:
-        file_name = directory + '/college_followers/{}_followers.txt'.format(username)
+        file_name = directory + '/college-followers/{}_followers.txt'.format(username)
         get_followers(username, MAX_FOLLOWERS, file_name)

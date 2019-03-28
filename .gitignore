@@ -2,17 +2,14 @@
 .vscode/
 
 # twitter data directories
-college_followers/
-college-followers/
-metoo-tweets/
+/tweet-scraper/metoo-tweets
+/tweet-scraper/user-batches
+/user-scraper/college-followers
 
 # clustering result directory
-clusters/
+lda/clusters/
 
-# TRIPS parser result directory
-results/
-
-# TRIPS vagrant directory
+# TRIPS directories
 vagrant-trips/
 
 # SEMAFOR directory
