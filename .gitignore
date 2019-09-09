@@ -5,6 +5,8 @@
 /tweet-scraper/metoo-tweets
 /tweet-scraper/user-batches
 /user-scraper/college-followers
+/open-sesame
+/user-batches
 
 # clustering result directory
 lda/clusters/
