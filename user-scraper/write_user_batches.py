@@ -2,16 +2,17 @@ import os
 import sys
 import json
 import math
+from collections import defaultdict
 
 def merge_user_lists(input_dir):
-    user_dict = {}
+    user_dict = defaultdict(lambda:None)
     for file_name in sorted(os.listdir(input_dir)):
         if file_name.endswith('.txt'):
             college = file_name.split('_followers')[0]
             usernames = open(input_dir+'/'+file_name,'r').readlines()
             usernames = [u.strip() for u in usernames]
             for user in usernames:
-                if user in user_dict.keys():
+                if user_dict[user]:
                     user_dict[user].append(college)
                 else:
                     user_dict[user] = [college]
